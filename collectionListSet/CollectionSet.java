@@ -1,4 +1,4 @@
-package collectionsListSet;
+package collectionListSet;
 
 import java.util.Scanner;
 import java.util.Set;
