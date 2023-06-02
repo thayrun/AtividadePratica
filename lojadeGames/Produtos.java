@@ -58,16 +58,19 @@ public class Produtos {
 	public void setFabricante(String fabricante) {
 		this.fabricante = fabricante;
 	}
-	
 
 	// VISUALIZAR
 	public void visualizar() {
-		System.out.println(Cores.TEXT_WHITE + "Nome do Game: " + Cores.TEXT_CYAN + nomedojogo);
-		System.out.println(Cores.TEXT_WHITE +"Plataforma: " + Cores.TEXT_CYAN + plataforma + "             ");
-		System.out.println(Cores.TEXT_WHITE +"Preço " + Cores.TEXT_GREEN + "R$: " + valor + "                 ");
-		System.out.println(Cores.TEXT_WHITE +"Estoque: " + Cores.TEXT_RED + estoque + "                       ");
-		System.out.println(Cores.TEXT_WHITE +"Fabricante: " + Cores.TEXT_CYAN + fabricante + "              ");
-		System.out.println(Cores.TEXT_WHITE +"-*--------*---------*--------*---");
-	}
-
+	System.out.println(Cores.TEXT_WHITE + "Nome do Game: " + Cores.TEXT_CYAN + nomedojogo);
+    System.out.println(Cores.TEXT_WHITE + "Plataforma: " + Cores.TEXT_CYAN + plataforma + "             ");
+    System.out.println(Cores.TEXT_WHITE + "Preço " + Cores.TEXT_GREEN + "R$: " + valor + "                 ");
+    if (estoque <= 5) {
+        System.out.print(Cores.TEXT_WHITE + "Estoque: " + Cores.TEXT_RED);
+    } else {
+        System.out.print(Cores.TEXT_WHITE + "Estoque: " + Cores.TEXT_YELLOW);
+    }
+    System.out.println(estoque + "                       ");
+    System.out.println(Cores.TEXT_WHITE + "Fabricante: " + Cores.TEXT_CYAN + fabricante + "              ");
+    System.out.println(Cores.TEXT_WHITE + "-*--------*---------*--------*---");
+}
 }
